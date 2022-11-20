@@ -8,7 +8,9 @@ import 'package:iconsax/iconsax.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:task_management_app/app/utils/style/AppColors.dart';
 import 'package:task_management_app/app/utils/widget/header.dart';
+import 'package:task_management_app/app/utils/widget/myfriends.dart';
 import 'package:task_management_app/app/utils/widget/sidebar.dart';
+import 'package:task_management_app/app/utils/widget/upcomingtask.dart';
 
 import '../controllers/home_controller.dart';
 
@@ -45,7 +47,7 @@ class HomeView extends GetView<HomeController> {
                                   _drawerKey.currentState!.openDrawer();
                                 },
                                 icon: const Icon(
-                                  Iconsax.menu,
+                                  Icons.menu,
                                   color: AppColors.primaryText,
                                 ),
                               ),
@@ -110,7 +112,7 @@ class HomeView extends GetView<HomeController> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            height: Get.height * 0.39,
+                            height: Get.height * 0.32,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
@@ -483,183 +485,19 @@ class HomeView extends GetView<HomeController> {
                                         ),
                                       ]),
                                 ),
-                                Expanded(
-                                  child: Row(
-                                    children: [
-                                      Expanded(
-                                        child: SingleChildScrollView(
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.start,
-                                            children: [
-                                              const Text(
-                                                'Upcoming Task',
-                                                style: TextStyle(
-                                                    color:
-                                                        AppColors.primaryText,
-                                                    fontSize: 21),
-                                              ),
-                                              const SizedBox(
-                                                height: 20,
-                                              ),
-                                              SizedBox(
-                                                height: 400,
-                                                child: ListView(
-                                                  clipBehavior: Clip.antiAlias,
-                                                  //scrollDirection: Axis.vertical,
-                                                  shrinkWrap: true,
-                                                  children: [
-                                                    SizedBox(
-                                                      height: 200,
-                                                      child: Container(
-                                                        decoration:
-                                                            BoxDecoration(
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(20),
-                                                          color:
-                                                              AppColors.cardbg,
-                                                        ),
-                                                        margin:
-                                                            EdgeInsets.all(10),
-                                                        padding:
-                                                            EdgeInsets.all(10),
-                                                        child: Column(
-                                                          children: [
-                                                            Row(
-                                                              children: [
-                                                                ClipRRect(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              25),
-                                                                  child:
-                                                                      const CircleAvatar(
-                                                                    backgroundColor:
-                                                                        Colors
-                                                                            .amber,
-                                                                    radius: 20,
-                                                                    foregroundImage:
-                                                                        NetworkImage(
-                                                                            'https://www.google.com/url?sa=i&url=https%3A%2F%2Ficon-icons.com%2Fid%2Ficon%2FPink-Bunga%2F98688&psig=AOvVaw3LVmKzCT5lz9o8BDNIs_fE&ust=1668839106644000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMDbh6SMt_sCFQAAAAAdAAAAABAE'),
-                                                                  ),
-                                                                ),
-                                                                ClipRRect(
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              25),
-                                                                  child:
-                                                                      const CircleAvatar(
-                                                                    backgroundColor:
-                                                                        Colors
-                                                                            .amber,
-                                                                    radius: 20,
-                                                                    foregroundImage:
-                                                                        NetworkImage(
-                                                                            "https://www.google.com/url?sa=i&url=https%3A%2F%2Ficon-icons.com%2Fid%2Ficon%2FPink-Bunga%2F98688&psig=AOvVaw3LVmKzCT5lz9o8BDNIs_fE&ust=1668839106644000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMDbh6SMt_sCFQAAAAAdAAAAABAE"),
-                                                                  ),
-                                                                ),
-                                                                const Spacer(),
-                                                                Container(
-                                                                  height: 25,
-                                                                  width: 50,
-                                                                  color: AppColors
-                                                                      .primaryBg,
-                                                                  child:
-                                                                      const Center(
-                                                                    child: Text(
-                                                                      '100%',
-                                                                      style:
-                                                                          TextStyle(
-                                                                        color: AppColors
-                                                                            .primaryText,
-                                                                      ),
-                                                                    ),
-                                                                  ),
-                                                                ),
-                                                              ],
-                                                            ),
-                                                            const Spacer(),
-                                                            Container(
-                                                              height: 25,
-                                                              width: 80,
-                                                              color: AppColors
-                                                                  .primaryBg,
-                                                              child:
-                                                                  const Center(
-                                                                      child:
-                                                                          Text(
-                                                                '10/10 task',
-                                                                style:
-                                                                    TextStyle(
-                                                                  color: AppColors
-                                                                      .primaryText,
-                                                                ),
-                                                              )),
-                                                            ),
-                                                            const Text(
-                                                              'Pemrograman mobile',
-                                                              style: TextStyle(
-                                                                  color: AppColors
-                                                                      .primaryText,
-                                                                  fontSize: 20),
-                                                            ),
-                                                            const Text(
-                                                              'Deadline 2 hari lagi',
-                                                              style: TextStyle(
-                                                                  color: AppColors
-                                                                      .primaryText,
-                                                                  fontSize: 15),
-                                                            ),
-                                                          ],
-                                                        ),
-                                                      ),
-                                                    )
-                                                  ],
-                                                ),
-                                              )
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                      Expanded(
-                                        child: Column(
-                                          children: [
-                                            Row(
-                                              children: [
-                                                const Text(
-                                                  'My Friends',
-                                                  style: TextStyle(
-                                                      color:
-                                                          AppColors.primaryText,
-                                                      fontSize: 21),
-                                                ),
-                                                const Text(
-                                                  'More',
-                                                  style: TextStyle(
-                                                      color:
-                                                          AppColors.primaryText,
-                                                      fontSize: 21),
-                                                ),
-                                                const Icon(
-                                                  Ionicons.arrow_forward,
-                                                  color: AppColors.primaryText,
-                                                )
-                                              ],
-                                            ),
-                                            const SizedBox(
-                                              height: 10,
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
                               ],
                             ),
                           ),
+                          !context.isPhone
+                              ? Expanded(
+                                  child: Row(
+                                    children: const [
+                                      UpcomingTask(),
+                                      MyFriends(),
+                                    ],
+                                  ),
+                                )
+                              : const UpcomingTask(),
                         ],
                       ),
                     ),
