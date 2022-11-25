@@ -13,14 +13,11 @@ class UpcomingTask extends StatelessWidget {
       child: SafeArea(
         child: SingleChildScrollView(
           child: Column(
-            crossAxisAlignment:
-                CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
                 'Upcoming Task',
-                style: TextStyle(
-                    color: AppColors.primaryText,
-                    fontSize: 21),
+                style: TextStyle(color: AppColors.primaryText, fontSize: 21),
               ),
               const SizedBox(
                 height: 10,
@@ -36,70 +33,44 @@ class UpcomingTask extends StatelessWidget {
                         height: 150,
                         //width: 400,
                         decoration: BoxDecoration(
-                          borderRadius:
-                              BorderRadius.circular(
-                                  20),
+                          borderRadius: BorderRadius.circular(20),
                           color: AppColors.cardbg,
                         ),
-                        margin:
-                            const EdgeInsets.all(
-                                10),
-                        padding:
-                            const EdgeInsets.all(
-                                10),
+                        margin: const EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         child: Column(
-                          crossAxisAlignment:
-                              CrossAxisAlignment
-                                  .start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
                               children: [
                                 ClipRRect(
-                                  borderRadius:
-                                      BorderRadius
-                                          .circular(
-                                              25),
-                                  child:
-                                      const CircleAvatar(
-                                    backgroundColor:
-                                        Colors
-                                            .amber,
+                                  borderRadius: BorderRadius.circular(25),
+                                  child: const CircleAvatar(
+                                    backgroundColor: Colors.amber,
                                     radius: 20,
-                                    foregroundImage:
-                                        NetworkImage(
-                                            'https://www.google.com/url?sa=i&url=https%3A%2F%2Ficon-icons.com%2Fid%2Ficon%2FPink-Bunga%2F98688&psig=AOvVaw3LVmKzCT5lz9o8BDNIs_fE&ust=1668839106644000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMDbh6SMt_sCFQAAAAAdAAAAABAE'),
+                                    foregroundImage: NetworkImage(
+                                        'https://images.unsplash.com/photo-1475823678248-624fc6f85785?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzY1fHxwZXJzb258ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60'),
                                   ),
                                 ),
                                 ClipRRect(
-                                  borderRadius:
-                                      BorderRadius
-                                          .circular(
-                                              25),
-                                  child:
-                                      const CircleAvatar(
-                                    backgroundColor:
-                                        Colors
-                                            .amber,
+                                  borderRadius: BorderRadius.circular(25),
+                                  child: const CircleAvatar(
+                                    backgroundColor: Colors.amber,
                                     radius: 20,
-                                    foregroundImage:
-                                        NetworkImage(
-                                            'https://www.google.com/url?sa=i&url=https%3A%2F%2Ficon-icons.com%2Fid%2Ficon%2FPink-Bunga%2F98688&psig=AOvVaw3LVmKzCT5lz9o8BDNIs_fE&ust=1668839106644000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMDbh6SMt_sCFQAAAAAdAAAAABAE'),
+                                    foregroundImage: NetworkImage(
+                                        'https://images.unsplash.com/photo-1475823678248-624fc6f85785?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzY1fHxwZXJzb258ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60'),
                                   ),
                                 ),
                                 const Spacer(),
                                 Container(
                                   height: 25,
                                   width: 80,
-                                  color: AppColors
-                                      .primaryBg,
-                                  child:
-                                      const Center(
+                                  color: AppColors.primaryBg,
+                                  child: const Center(
                                     child: Text(
                                       '100%',
-                                      style:
-                                          TextStyle(
-                                        color: AppColors
-                                            .primaryText,
+                                      style: TextStyle(
+                                        color: AppColors.primaryText,
                                       ),
                                     ),
                                   ),
@@ -110,30 +81,24 @@ class UpcomingTask extends StatelessWidget {
                             Container(
                               height: 25,
                               width: 80,
-                              color: AppColors
-                                  .primaryBg,
+                              color: AppColors.primaryBg,
                               child: const Center(
                                   child: Text(
                                 '10/10 task',
                                 style: TextStyle(
-                                  color: AppColors
-                                      .primaryText,
+                                  color: AppColors.primaryText,
                                 ),
                               )),
                             ),
                             const Text(
                               'Pemrograman mobile',
                               style: TextStyle(
-                                  color: AppColors
-                                      .primaryText,
-                                  fontSize: 20),
+                                  color: AppColors.primaryText, fontSize: 20),
                             ),
                             const Text(
                               'Deadline 2 hari lagi',
                               style: TextStyle(
-                                  color: AppColors
-                                      .primaryText,
-                                  fontSize: 15),
+                                  color: AppColors.primaryText, fontSize: 15),
                             ),
                           ],
                         ),
@@ -142,70 +107,44 @@ class UpcomingTask extends StatelessWidget {
                         height: 150,
                         //width: 400,
                         decoration: BoxDecoration(
-                          borderRadius:
-                              BorderRadius.circular(
-                                  20),
+                          borderRadius: BorderRadius.circular(20),
                           color: AppColors.cardbg,
                         ),
-                        margin:
-                            const EdgeInsets.all(
-                                10),
-                        padding:
-                            const EdgeInsets.all(
-                                10),
+                        margin: const EdgeInsets.all(10),
+                        padding: const EdgeInsets.all(10),
                         child: Column(
-                          crossAxisAlignment:
-                              CrossAxisAlignment
-                                  .start,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Row(
                               children: [
                                 ClipRRect(
-                                  borderRadius:
-                                      BorderRadius
-                                          .circular(
-                                              25),
-                                  child:
-                                      const CircleAvatar(
-                                    backgroundColor:
-                                        Colors
-                                            .amber,
+                                  borderRadius: BorderRadius.circular(25),
+                                  child: const CircleAvatar(
+                                    backgroundColor: Colors.amber,
                                     radius: 20,
-                                    foregroundImage:
-                                        NetworkImage(
-                                            'https://www.google.com/url?sa=i&url=https%3A%2F%2Ficon-icons.com%2Fid%2Ficon%2FPink-Bunga%2F98688&psig=AOvVaw3LVmKzCT5lz9o8BDNIs_fE&ust=1668839106644000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMDbh6SMt_sCFQAAAAAdAAAAABAE'),
+                                    foregroundImage: NetworkImage(
+                                        'https://images.unsplash.com/photo-1475823678248-624fc6f85785?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzY1fHxwZXJzb258ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60'),
                                   ),
                                 ),
                                 ClipRRect(
-                                  borderRadius:
-                                      BorderRadius
-                                          .circular(
-                                              25),
-                                  child:
-                                      const CircleAvatar(
-                                    backgroundColor:
-                                        Colors
-                                            .amber,
+                                  borderRadius: BorderRadius.circular(25),
+                                  child: const CircleAvatar(
+                                    backgroundColor: Colors.amber,
                                     radius: 20,
-                                    foregroundImage:
-                                        NetworkImage(
-                                            'https://www.google.com/url?sa=i&url=https%3A%2F%2Ficon-icons.com%2Fid%2Ficon%2FPink-Bunga%2F98688&psig=AOvVaw3LVmKzCT5lz9o8BDNIs_fE&ust=1668839106644000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMDbh6SMt_sCFQAAAAAdAAAAABAE'),
+                                    foregroundImage: NetworkImage(
+                                        'https://images.unsplash.com/photo-1475823678248-624fc6f85785?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzY1fHxwZXJzb258ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60'),
                                   ),
                                 ),
                                 const Spacer(),
                                 Container(
                                   height: 25,
                                   width: 80,
-                                  color: AppColors
-                                      .primaryBg,
-                                  child:
-                                      const Center(
+                                  color: AppColors.primaryBg,
+                                  child: const Center(
                                     child: Text(
                                       '100%',
-                                      style:
-                                          TextStyle(
-                                        color: AppColors
-                                            .primaryText,
+                                      style: TextStyle(
+                                        color: AppColors.primaryText,
                                       ),
                                     ),
                                   ),
@@ -216,30 +155,24 @@ class UpcomingTask extends StatelessWidget {
                             Container(
                               height: 25,
                               width: 80,
-                              color: AppColors
-                                  .primaryBg,
+                              color: AppColors.primaryBg,
                               child: const Center(
                                   child: Text(
                                 '10/10 task',
                                 style: TextStyle(
-                                  color: AppColors
-                                      .primaryText,
+                                  color: AppColors.primaryText,
                                 ),
                               )),
                             ),
                             const Text(
                               'Pemrograman mobile',
                               style: TextStyle(
-                                  color: AppColors
-                                      .primaryText,
-                                  fontSize: 20),
+                                  color: AppColors.primaryText, fontSize: 20),
                             ),
                             const Text(
                               'Deadline 2 hari lagi',
                               style: TextStyle(
-                                  color: AppColors
-                                      .primaryText,
-                                  fontSize: 15),
+                                  color: AppColors.primaryText, fontSize: 15),
                             ),
                           ],
                         ),

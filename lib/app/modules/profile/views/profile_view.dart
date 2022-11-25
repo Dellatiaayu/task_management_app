@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
+import 'package:task_management_app/app/routes/app_pages.dart';
 import 'package:task_management_app/app/utils/style/AppColors.dart';
+import 'package:task_management_app/app/utils/widget/MyTask.dart';
 import 'package:task_management_app/app/utils/widget/header.dart';
+import 'package:task_management_app/app/utils/widget/profilewidget.dart';
 import 'package:task_management_app/app/utils/widget/sidebar.dart';
 
 import '../controllers/profile_controller.dart';
@@ -34,7 +37,7 @@ class ProfileView extends GetView<ProfileController> {
                 !context.isPhone
                     ? const header()
                     : Container(
-                        padding: EdgeInsets.all(20),
+                        padding: const EdgeInsets.all(10),
                         child: Row(
                           children: [
                             IconButton(
@@ -68,21 +71,39 @@ class ProfileView extends GetView<ProfileController> {
                               ],
                             ),
                             const Spacer(),
-                            const Icon(
-                              Icons.notifications,
-                              color: AppColors.primaryText,
-                              size: 30,
-                            ),
-                            const SizedBox(
-                              width: 15,
-                            ),
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(30),
-                              child: const CircleAvatar(
-                                backgroundColor: Colors.amber,
-                                radius: 25,
-                                foregroundImage: NetworkImage(
-                                    'https://www.google.com/url?sa=i&url=https%3A%2F%2Ficon-icons.com%2Fid%2Ficon%2Fmusim-semi-bunga-alam%2F57269&psig=AOvVaw35tObMScokij01BdanruZG&ust=1668691587631000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLjLw97msvsCFQAAAAAdAAAAABAE'),
+                            GestureDetector(
+                              onTap: () {
+                                Get.defaultDialog(
+                                  title: 'Sign Out',
+                                  content: const Text(
+                                      'Are You Sure Want To Sign Out ?'),
+                                  cancel: ElevatedButton(
+                                    onPressed: () => Get.back(),
+                                    child: const Text('Cancle'),
+                                  ),
+                                  confirm: ElevatedButton(
+                                    onPressed: () => Get.toNamed(Routes.LOGIN),
+                                    child: const Text('Sign Out'),
+                                  ),
+                                );
+                              },
+                              child: Row(
+                                children: const [
+                                  Text(
+                                    'Sign Out',
+                                    style: TextStyle(
+                                        color: AppColors.primaryText,
+                                        fontSize: 16),
+                                  ),
+                                  SizedBox(
+                                    width: 5,
+                                  ),
+                                  Icon(
+                                    Icons.logout_outlined,
+                                    color: AppColors.primaryText,
+                                    size: 25,
+                                  ),
+                                ],
                               ),
                             ),
                           ],
@@ -91,15 +112,36 @@ class ProfileView extends GetView<ProfileController> {
                 // content / isi page / screen
                 Expanded(
                   child: Container(
-                    padding: const EdgeInsets.all(50),
+                    padding: !context.isPhone
+                        ? const EdgeInsets.all(15)
+                        : const EdgeInsets.all(10),
                     margin: !context.isPhone
                         ? const EdgeInsets.all(10)
                         : const EdgeInsets.all(0),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: !context.isPhone
-                          ? BorderRadius.circular(50)
-                          : BorderRadius.circular(30),
+                          ? BorderRadius.circular(30)
+                          : BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        ProfileWidget(),
+                        Text(
+                          'My Task',
+                          style: TextStyle(
+                              color: AppColors.primaryText, fontSize: 21),
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        SizedBox(
+                          height: 160,
+                          child: MyTask(),
+                        ),
+                      ],
                     ),
                   ),
                 ),

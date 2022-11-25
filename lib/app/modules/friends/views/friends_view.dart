@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:html';
 
 import 'package:flutter/material.dart';
@@ -6,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:task_management_app/app/utils/style/AppColors.dart';
 import 'package:task_management_app/app/utils/widget/header.dart';
+import 'package:task_management_app/app/utils/widget/myfriends.dart';
 import 'package:task_management_app/app/utils/widget/sidebar.dart';
 
 import '../controllers/friends_controller.dart';
@@ -34,7 +36,7 @@ class FriendsView extends GetView<FriendsController> {
                 !context.isPhone
                     ? const header()
                     : Container(
-                        padding: EdgeInsets.all(20),
+                        padding: const EdgeInsets.all(20),
                         child: Row(
                           children: [
                             IconButton(
@@ -82,7 +84,7 @@ class FriendsView extends GetView<FriendsController> {
                                 backgroundColor: Colors.amber,
                                 radius: 25,
                                 foregroundImage: NetworkImage(
-                                    'https://www.google.com/url?sa=i&url=https%3A%2F%2Ficon-icons.com%2Fid%2Ficon%2Fmusim-semi-bunga-alam%2F57269&psig=AOvVaw35tObMScokij01BdanruZG&ust=1668691587631000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCLjLw97msvsCFQAAAAAdAAAAABAE'),
+                                    'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fHBlcnNvbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=60'),
                               ),
                             ),
                           ],
@@ -91,7 +93,9 @@ class FriendsView extends GetView<FriendsController> {
                 // content / isi page / screen
                 Expanded(
                   child: Container(
-                    padding: const EdgeInsets.all(50),
+                    padding: !context.isPhone
+                        ? const EdgeInsets.all(15)
+                        : const EdgeInsets.all(10),
                     margin: !context.isPhone
                         ? const EdgeInsets.all(10)
                         : const EdgeInsets.all(0),
@@ -100,6 +104,69 @@ class FriendsView extends GetView<FriendsController> {
                       borderRadius: !context.isPhone
                           ? BorderRadius.circular(50)
                           : BorderRadius.circular(30),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'People You May Know',
+                          style: TextStyle(
+                              fontSize: 21, color: AppColors.primaryText),
+                        ),
+                        SizedBox(
+                          height: 200,
+                          child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            shrinkWrap: true,
+                            clipBehavior: Clip.antiAlias,
+                            itemCount: 10,
+                            itemBuilder: (context, index) {
+                              return Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Stack(
+                                  children: [
+                                    ClipRRect(
+                                      borderRadius: BorderRadius.circular(50),
+                                      child: const Image(
+                                        image: NetworkImage(
+                                            'https://images.unsplash.com/photo-1475823678248-624fc6f85785?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzY1fHxwZXJzb258ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60'),
+                                      ),
+                                    ),
+                                    const Positioned(
+                                      bottom: 10,
+                                      left: 50,
+                                      child: Text(
+                                        'Alicia Jasmine',
+                                        style: TextStyle(color: Colors.white),
+                                      ),
+                                    ),
+                                    Positioned(
+                                        bottom: 0,
+                                        right: 0,
+                                        child: SizedBox(
+                                          height: 36,
+                                          width: 36,
+                                          child: ElevatedButton(
+                                            onPressed: () {},
+                                            style: ElevatedButton.styleFrom(
+                                              padding: EdgeInsets.zero,
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(50),
+                                              ),
+                                            ),
+                                            child:
+                                                const Icon(Icons.add_circle_outline),
+                                          ),
+                                        ))
+                                  ],
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                        const MyFriends(),
+                      ],
                     ),
                   ),
                 ),

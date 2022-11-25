@@ -19,21 +19,21 @@ class MyFriends extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Text(
+                  const Text(
                     'My Friends',
                     style:
                         TextStyle(color: AppColors.primaryText, fontSize: 21),
                   ),
-                  Spacer(),
+                  const Spacer(),
                   GestureDetector(
                     onTap: (() => Get.toNamed(Routes.FRIENDS)),
-                    child: Text(
+                    child: const Text(
                       'more',
                       style:
                           TextStyle(color: AppColors.primaryText, fontSize: 19),
                     ),
                   ),
-                  Icon(
+                  const Icon(
                     Icons.chevron_right,
                     color: AppColors.primaryText,
                   )
@@ -47,25 +47,24 @@ class MyFriends extends StatelessWidget {
                 child: GridView.builder(
                     shrinkWrap: true,
                     itemCount: 8,
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 3,
-                            crossAxisSpacing: 20,
-                            mainAxisSpacing: 20),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: context.isPhone ? 2 : 3,
+                        crossAxisSpacing: 10,
+                        mainAxisSpacing: 10),
                     itemBuilder: (context, index) {
                       return Column(
                         children: [
                           ClipRRect(
-                            borderRadius: BorderRadius.circular(100),
+                            borderRadius: BorderRadius.circular(500),
                             child: const Image(
                               image: NetworkImage(
-                                  'https://www.google.com/url?sa=i&url=https%3A%2F%2Ficon-icons.com%2Fid%2Ficon%2FPink-Bunga%2F98688&psig=AOvVaw3LVmKzCT5lz9o8BDNIs_fE&ust=1668839106644000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCMDbh6SMt_sCFQAAAAAdAAAAABAE'),
+                                  'https://images.unsplash.com/photo-1475823678248-624fc6f85785?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzY1fHxwZXJzb258ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60'),
                             ),
                           ),
                           const Text(
                             'Alicia Jasmin',
                             style: TextStyle(color: AppColors.primaryText),
-                          )
+                          ),
                         ],
                       );
                     }),
