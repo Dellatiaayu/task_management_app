@@ -61,7 +61,7 @@ class TaskView extends GetView<TaskController> {
                                         color: AppColors.primaryText),
                                   ),
                                   Text(
-                                    'Manage Task made easy with friends',
+                                    'Manage Task made easy',
                                     style: TextStyle(
                                         fontSize: 14,
                                         color: AppColors.primaryText),
