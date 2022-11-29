@@ -26,11 +26,11 @@ class header extends StatelessWidget {
               children: const [
                 Text(
                   'Task Management',
-                  style: TextStyle(fontSize: 25, color: AppColors.primaryText),
+                  style: TextStyle(fontSize: 24, color: AppColors.primaryText),
                 ),
                 Text(
                   'Manage Task made easy with friends',
-                  style: TextStyle(fontSize: 15, color: AppColors.primaryText),
+                  style: TextStyle(fontSize: 13, color: AppColors.primaryText),
                 ),
               ],
             ),

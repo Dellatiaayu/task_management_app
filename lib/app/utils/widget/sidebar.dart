@@ -90,8 +90,8 @@ class SideBar extends StatelessWidget {
                               : const BoxDecoration(),
                           child: Icon(
                             Get.currentRoute == '/task'
-                                ? Icons.chat_bubble
-                                : Icons.chat_bubble_outline,
+                                ? Ionicons.cube
+                                : Ionicons.cube_outline,
                             color: AppColors.primaryText,
                             size: 30,
                           ),
@@ -129,8 +129,8 @@ class SideBar extends StatelessWidget {
                               : const BoxDecoration(),
                           child: Icon(
                             Get.currentRoute == '/friends'
-                                ? Iconsax.heart5
-                                : Iconsax.heart,
+                                ? Ionicons.heart
+                                : Ionicons.heart_outline,
                             color: AppColors.primaryText,
                             size: 30,
                           ),
