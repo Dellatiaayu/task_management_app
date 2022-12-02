@@ -14,14 +14,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "435931294039-0cmg30g7aj4evdvvc7sva1c10ppt5c6c.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.task_management_app",
-            "certificate_hash": "ae3872329c18874413c8b0793e26ef76c8f71186"
-          }
-        },
-        {
           "client_id": "435931294039-kcno916dqpns9iu7hrhkm7ujiqppn5b9.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -37,13 +29,6 @@
             {
               "client_id": "435931294039-kcno916dqpns9iu7hrhkm7ujiqppn5b9.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "435931294039-79uf4c6k4qjgecp8l1d5uq669n71g1s0.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.taskManagementApp"
-              }
             }
           ]
         }

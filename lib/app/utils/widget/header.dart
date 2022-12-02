@@ -78,7 +78,7 @@ class header extends StatelessWidget {
                   content: const Text('Are You Sure Want To Sign Out ?'),
                   cancel: ElevatedButton(
                     onPressed: () => Get.back(),
-                    child: const Text('Cancle'),
+                    child: const Text('Cancel'),
                   ),
                   confirm: ElevatedButton(
                     onPressed: () => Get.toNamed(Routes.LOGIN),

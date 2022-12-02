@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -90,21 +88,18 @@ class ProfileView extends GetView<ProfileController> {
                                     ),
                                   );
                                 },
-                                child: Row(
+                                child: Column(
                                   children: const [
+                                    Icon(
+                                      Icons.logout_outlined,
+                                      color: AppColors.primaryText,
+                                      size: 25,
+                                    ),
                                     Text(
                                       'Sign Out',
                                       style: TextStyle(
                                           color: AppColors.primaryText,
                                           fontSize: 16),
-                                    ),
-                                    SizedBox(
-                                      width: 5,
-                                    ),
-                                    Icon(
-                                      Icons.logout_outlined,
-                                      color: AppColors.primaryText,
-                                      size: 25,
                                     ),
                                   ],
                                 ),
